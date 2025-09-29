@@ -196,3 +196,54 @@ video {
   font-weight: 300;
   letter-spacing: 0.5px;
 }
+
+/* Grid Container - Tablet */
+@media (min-width: 768px) {
+  .header {
+    border-bottom: none;
+  }
+
+  .container {
+    grid-template-areas:
+      ". header header"
+      "nav main main"
+      "nav main main"
+      "footer footer footer";
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .nav {
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+  }
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding: 100px;
+    background-color: white;
+  }
+  .container {
+    padding: 100px;
+    grid-template-areas:
+      ". header header header"
+      "nav main main main"
+      "nav main main main"
+      "footer footer footer footer";
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .nav {
+    border-left: 1px solid #e8e8e8;
+  }
+}
