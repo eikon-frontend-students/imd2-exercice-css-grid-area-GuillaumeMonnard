@@ -221,29 +221,29 @@ video {
   }
 
   .projects-grid {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    margin-top: 3rem;
   }
 }
 
 @media (min-width: 1200px) {
   body {
-    padding: 100px;
     background-color: white;
   }
+
   .container {
-    padding: 100px;
     grid-template-areas:
-      ". header header header"
-      "nav main main main"
-      "nav main main main"
-      "footer footer footer footer";
-    grid-template-columns: repeat(4, 1fr);
+      ".    .     .     header header header header header header header header header"
+      ".    nav    nav  main   main   main   main   main   main   main   main   main"
+      ".    nav    nav  main   main   main   main   main   main   main   main   main"
+      "footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-columns: repeat(12, 1fr);
   }
 
   .nav {
     border-left: 1px solid #e8e8e8;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
